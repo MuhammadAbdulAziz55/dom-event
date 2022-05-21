@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <section>
+            <h3>Exploring DOM</h3>
+            <article>
+                <h3>article-1</h3>
+                <p title='I am the most important author' class="author" id="bestSeller">author-1</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus porro nesciunt perferendis molestiae voluptatibus blanditiis repudiandae nisi atque corrupti officia laborum aperiam, necessitatibus magni harum aspernatur autem officiis laboriosam enim!</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Recusandae, labore sint, maiores ex tenetur iure velit optio consequuntur officia nulla omnis deleniti dolorum, voluptatibus commodi ipsum doloribus asperiores voluptates facere! Ullam voluptatem fugit quidem dolore facilis excepturi veritatis!</p>
+            </article>
+            <article class="special"> 
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Ea fuga voluptate iste obcaecati corrupti itaque odio ipsam fugiat quae eligendi aut sit consectetur beatae omnis asperiores quod, vel nemo amet temporibus eos soluta. Tempore reprehenderit quidem veritatis beatae.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+      var authors = document.querySelectorAll('.special h3');
+      for (let i = 0; i < authors.length; i++) {
+          const element = authors[i];
+          element.innerHTML = 'lekhok-' + (i + 1);
+          element.setAttribute('title', 'all author are same');
+          element.style.backgroundColor = 'blue';
+          element.style.margin = '5 px';
+          
+      }
+    </script>
+</body>
+</html>
